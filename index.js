@@ -30,6 +30,11 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+    app.post('/toys', async(req, res)=>{
+      const AddedToys = req.body;
+      console.log(AddedToys);
+    })
+
 
 
     
@@ -52,4 +57,4 @@ app.get('/', (req, res)=> {
 
 app.listen(port, () => {
     console.log(`Toyland server is running on port: ${port} `)
-})
+}) 
